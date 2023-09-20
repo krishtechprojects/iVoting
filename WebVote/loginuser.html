@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i-Voting - User Login</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #333; /* Fallback color if image is unavailable */
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .navbar-brand {
+      color: #3498db;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-brand:hover {
+      color: #e74c3c;
+    }
+
+    .nav-link {
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #e67e22;
+    }
+
+    .login-panel,
+    .register-panel {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .login-panel h2,
+    .register-panel h2 {
+      color: #e74c3c;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .login-panel p,
+    .register-panel p {
+      color: #333;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">i-Voting</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+	<li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="loginuser.html">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="loginadmin.html">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="login-panel">
+        <h2>User Login</h2>
+        <form action="UserLogin.php" method="POST">
+          <div class="form-group">
+            <label for="adharid">Adhar ID:</label>
+            <input type="text" class="form-control" id="adharid" name="adharid" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="register-panel">
+        <h2>Register</h2>
+        <p>Don't have an account? Register here:</p>
+        <a href="registeruser.html" class="btn btn-success">Register</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
